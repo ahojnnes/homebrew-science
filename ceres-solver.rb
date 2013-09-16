@@ -11,7 +11,6 @@ class CeresSolver < Formula
   depends_on 'gflags'
   depends_on 'eigen'
   depends_on 'suite-sparse' => :recommended
-  depends_on 'protobuf' => :optional
 
   def install
     system "cmake", ".", *std_cmake_args
