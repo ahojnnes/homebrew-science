@@ -36,6 +36,8 @@ class Opencv < Formula
   # in Homebrew anyway. Will depend on openexr if it's installed.
   depends_on 'ffmpeg' => :optional
 
+  def patches; DATA; end
+
   def install
     jpeg = Formula["jpeg"]
     py_prefix = %x(python-config --prefix).chomp
@@ -104,3 +106,17 @@ class Opencv < Formula
     end
   end
 end
+
+__END__
+diff --git a/cmake/FindCUDA.cmake b/cmake/FindCUDA.cmake
+index e7ece0e..802beac 100644
+--- a/cmake/FindCUDA.cmake
++++ b/cmake/FindCUDA.cmake
+@@ -862,7 +862,7 @@ if(APPLE)
+     get_filename_component(_cuda_path_to_cudart "${CUDA_CUDART_LIBRARY}" PATH)
+   endif()
+   if(_cuda_path_to_cudart)
+-    list(APPEND CUDA_LIBRARIES -Wl,-rpath "-Wl,${_cuda_path_to_cudart}")
++    #list(APPEND CUDA_LIBRARIES -Wl,-rpath "-Wl,${_cuda_path_to_cudart}")
+   endif()
+ endif()
