@@ -1,8 +1,8 @@
 class SuiteSparse < Formula
   homepage "http://faculty.cse.tamu.edu/davis/suitesparse.html"
-  url "http://faculty.cse.tamu.edu/davis/SuiteSparse/SuiteSparse-4.2.1.tar.gz"
-  mirror "http://pkgs.fedoraproject.org/repo/pkgs/suitesparse/SuiteSparse-4.2.1.tar.gz/4628df9eeae10ae5f0c486f1ac982fce/SuiteSparse-4.2.1.tar.gz"
-  sha1 "2fec3bf93314bd14cbb7470c0a2c294988096ed6"
+  url "http://faculty.cse.tamu.edu/davis/SuiteSparse/SuiteSparse-4.4.4.tar.gz"
+  mirror "http://fossies.org/linux/misc/SuiteSparse-4.4.4.tar.gz"
+  sha1 "13f5d8caa8df92a4d704426781365e55c09baf01"
 
   bottle do
     root_url "https://homebrew.bintray.com/bottles-science"
